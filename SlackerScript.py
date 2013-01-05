@@ -6,7 +6,7 @@ class SlackerScript:
             self.file = sys.argv[1]
         except IndexError:
             print "Usage: python SlackerScript.py <file.slacker>"
-
+            exit()
         self.variables = {}
         self.keys = {
 
