@@ -89,3 +89,55 @@ To fully understand how this statement works read the ADD statement docs, this i
     DIVIDE one, two
 
 ### FOR 
+
+The FOR loop is a loop that will execute the code you want for a set number of times, take a look at the following example.
+
+    a = 0
+    b = 1
+    END VARS
+    FOR:100 ADD a,b
+
+What this scipt does is count from 1 to 100. The number after the colon is the amount of times the loop will execute the code, in this case the code being [ADD a,b]
+
+### FOREVER
+
+The FOREVER loop is simply a loop that will execute forever, or until the user quits the program, the following example should be enough for you to understand how the FOREVER loop works.
+
+    a = 0
+    b = 1
+    END VARS
+    FOREVER ADD a,b
+
+### SAY
+
+The say statement is the easiest statement to understand, it is simply used to print a string, the following exampe should be more than enough.
+
+    END VARS
+    SAY This is a string, also notice no variables but we still need the END VARS statement.
+
+### Cool Stuff
+
+A cool thing you can play with when using Slacker is the idea of multiple math statements in one statement. You can execute things like 
+
+    a = 5
+    b = 5
+    END VARS
+    ADD a,b MULTIPLY
+
+This will first add a and b then multiply the variables a and b. When this is executed it will output 50. Play around with it see what you can do.
+
+Some more examples
+
+    a = 5
+    b = 6
+    END VARS
+    FOR:100 ADD a,b MULTIPLY
+
+This is just crazy...
+
+
+    a = 50
+    b = 25
+    END VARS
+    FOREVER ADD a,b MULTIPLY SUBTRACT ADD
+
