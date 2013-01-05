@@ -1,6 +1,0 @@
-a = 1
-b = 2
-pp = 0
-END VARS
-
-FOREVER ADD a,b SUBTRACT MULTIPLY
