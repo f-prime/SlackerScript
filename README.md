@@ -99,6 +99,15 @@ The FOR loop is a loop that will execute the code you want for a set number of t
 
 What this scipt does is count from 1 to 100. The number after the colon is the amount of times the loop will execute the code, in this case the code being [ADD a,b]
 
+
+### Comments
+
+Comments in Slacker Script are done with a pound symbol. Example:
+
+    END VARS
+    #This is a comment
+    SAY See the comment?
+
 ### FOREVER
 
 The FOREVER loop is simply a loop that will execute forever, or until the user quits the program, the following example should be enough for you to understand how the FOREVER loop works.
