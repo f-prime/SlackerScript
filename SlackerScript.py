@@ -1,7 +1,11 @@
 import sys
-class Language:
+class SlackerScript:
     def __init__(self):
-        self.file = sys.argv[1]
+        try:
+            self.file = sys.argv[1]
+        except IndexError:
+            print "Usage: python SlackerScript.py <file.slacker>"
+
         self.variables = {}
         self.keys = {
 
@@ -84,6 +88,6 @@ class Language:
 
 if __name__ == "__main__":
     try:
-        Language().main()
+        SlackerScript().main()
     except KeyboardInterrupt:
         exit()
