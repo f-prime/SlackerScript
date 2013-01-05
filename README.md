@@ -1,7 +1,7 @@
 About Slacker Script
 ===================
 
-Slacker Script is a scripting language for playing with numbers. It is not exactly practice, more of a fun thing to learn.
+Slacker Script is a scripting language for playing with numbers. It is not exactly practical, more of a fun thing to learn.
 
 Current Statements
 ------------------
