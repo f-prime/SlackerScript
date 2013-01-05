@@ -1,7 +1,7 @@
-About SlackerScript
+About Slacker Script
 ===================
 
-SlackerScript is a simple language I created on a Friday night just for the hell of it. There is no real reason other than the fact that I enjoy writing interpreters and I was bored...
+Slacker Script is a scripting language for playing with numbers. It is not exactly practice, more of a fun thing to learn.
 
 Current Statements
 ------------------
