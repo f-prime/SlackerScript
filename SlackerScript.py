@@ -1,3 +1,4 @@
+#!/usr/bin/python
 import sys
 class SlackerScript:
     def __init__(self):
