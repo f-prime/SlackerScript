@@ -9,14 +9,14 @@ class SlackerScript:
             exit()
         self.variables = {}
         self.keys = {
-
+                "IF":self.ifstatement,
+                "FOR":self.forloop,
+                "FOREVER":self.foreverloop,
                 "ADD":self.add,
                 "SUBTRACT":self.subtract,
                 "MULTIPLY":self.multiply,
                 "DIVIDE":self.divide,
                 "SAY":self.say,
-                "FOR":self.forloop,
-                "FOREVER":self.foreverloop,
                 }
         self.endvars = False
 
@@ -32,7 +32,8 @@ class SlackerScript:
                     line = line.replace(" ", '')
                     var, equalsign, value = line.partition("=")
                     self.variables[var] = value
-                 
+                if line.startswith("IF "):
+                    self.keys['IF'](line)
                 else:
                     try:
                         for key in self.keys:
@@ -86,7 +87,16 @@ class SlackerScript:
             for key in self.keys:
                 if key in code:
                     self.keys[key](code)
-
+    def ifstatement(self, line):
+        line = line.replace("IF ", '')
+        line = line.split("|")
+        ifs = line[0].split(",")
+        condition = ''.join(line[1])
+        if self.variables[ifs[0]] == self.variables[ifs[1]]:
+            for key in self.keys:
+                if key in condition:
+                    self.keys[key](condition)
+                    break
 if __name__ == "__main__":
     try:
         SlackerScript().main()
